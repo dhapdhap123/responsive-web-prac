@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout3</title>
+    <style>
+        *{ padding:0; margin: 0;}
+        #wrap{width: 70%; height: 100vh; margin: auto;}
+        header{width: 100%; height: 15%; background: #EEF1FF;} 
+        #body-wrap{width: 100%; height: 70%;}
+        aside{float: left; width: 30%; height: 100%; background: #D2DAFF;}
+        section{float: right; width: 70%; height: calc(100% / 3);}
+        footer{clear: both; width: 100%; height: 15%; background: #B1B2FF;}
+        #sec1{background: #AAC4FF;}
+        #sec2{background: #9ebbff;}
+        #sec3{background: #8baeff;}
+
+        /* 화면 너비 0 ~ 1200px */
+        @media (max-width: 1200px){
+            #wrap{width: 100%;}
+            #sec1{height: 50%;}
+            #sec2{height: 50%;}
+            #sec3{clear: both; width: 100%;}
+        }
+        /* 화면 너비 0 ~ 768px */
+        @media (max-width: 768px){
+            aside{width: 50%; height: 50%;}
+            #sec1{width: 50%; height: 50%;}
+            #sec2{clear: both; width: 100%;}
+        }
+        /* 화면 너비 0 ~ 480px */
+        @media (max-width: 480px){
+            aside{width: 100%;}
+            #sec1{clear: both; width: 100%;}
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header></header>
+        <div id="body-wrap">
+            <aside></aside>
+            <section id="sec1"></section>
+            <section id="sec2"></section>
+            <section id="sec3"></section>
+        </div>
+        <footer></footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout5</title>
+    <style>
+        *{padding: 0; margin: 0;}
+        #wrap{width: 70%; margin: 0 auto;}
+        header{width: 100%; height: 100px; background: #f5e9fc;}
+        #banner{width: 100%; height: 400px; background: #E1CCEC;}
+        #content1{width: 100%; height: 400px;}
+        nav{float: left; width: calc(100% / 3); height: 100%; background: #C9B6E4;}
+        .article_right1{float: right; width: calc(100% / 3 * 2); height: 50%; background: #c9b6e4d2;}
+        .article_right2{float: right; width: calc(100% / 3 * 2); height: 50%; background: #c3ace5;}
+        #content2{width: 100%; height: 400px;}
+        .article_middle1{float: left; width: calc(100% / 3); height: 100%; background: #BE9FE1;}
+        .article_middle2{float: left; width: calc(100% / 3); height: 100%; background: #b48ce1;}
+        .article_middle3{float: left; width: calc(100% / 3); height: 100%; background: #a675de;}
+        #content3{width: 100%; height: 300px; background: #C9B6E4;}
+        #article_box{width: 100%; height: 100%; display: flex; justify-content: space-evenly; align-items: center;}
+        .article_bottom1{float: left; width: 150px; height: 150px; background: #8d4dd7;}
+        .article_bottom2{float: left; width: 150px; height: 150px; background: #8d4dd7;}
+        .article_bottom3{float: left; width: 150px; height: 150px; background: #8d4dd7;}
+        .article_bottom4{float: left; width: 150px; height: 150px; background: #8d4dd7;}
+        footer{width: 100%; height: 100px; background: #f5e9fc;}
+
+        /* 화면 너비 1200px 이하 */
+        @media(max-width: 1200px){
+            #wrap{width: 100%;}
+            .article_middle1{width: 50%; height: 100%;}
+            .article_middle2{width: 50%; height: 100%;}
+            .article_middle3{display: none;}
+            .article_bottom4{display: none;}
+        }
+        /* 화면 너비 768px 이하 */
+        @media(max-width: 768px){
+            nav{float: left; width: calc(100% / 5); height: 100%;}
+            .article_right1{width: calc(100% / 5 * 4); height: 50%;}
+            .article_right2{width: calc(100% / 5 * 4); height: 50%;}
+            .article_middle1{clear: both; width: 100%; height: 100%;}
+            .article_middle2{clear: both; width: 100%; height: 100%;}
+            #content3{clear: both;}
+        }
+    /* 화면 너비 480px 이하 */
+    @media(max-width: 480px){
+        *{clear: both;}
+        nav{width: 100%;}
+        .article_right1{width: 100%;}
+        .article_right2{width: 100%;}
+        #content3{height: 600px;}
+        #article_box{flex-direction: column; height: 100%;}
+        .article_bottom1{width: 300px; height: 150px;}
+        .article_bottom2{width: 300px; height: 150px;}
+        .article_bottom3{width: 300px; height: 150px;}
+    }
+
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header></header>
+        <section id="banner"></section>
+        <section id="content1">
+            <nav></nav>
+            <article class="article_right1"></article>
+            <article class="article_right2"></article>
+        </section>
+        <section id="content2">
+            <article class="article_middle1"></article>
+            <article class="article_middle2"></article>
+            <article class="article_middle3"></article>
+        </section>
+        <section id="content3">
+            <div id="article_box">
+                <article class="article_bottom1"></article>
+                <article class="article_bottom2"></article>
+                <article class="article_bottom3"></article>
+                <article class="article_bottom4"></article>
+            </div>
+        </section>
+        <footer></footer>
+    </div>
+</body>
+</html>
